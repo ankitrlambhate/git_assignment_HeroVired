@@ -16,3 +16,12 @@
       j. Merging to main branch: git checkout main, git pull origin main, git merge dev, git push origin main
       k. Adding the final release tag: git tag -a v2.0 -m "Version 2 with sqrt feature and bug fix", git push origin v2.0
        
+# 2. Git LFS:
+      a. Create a branch: git checkout -b lfs
+      b. Install Git LFS: git lfs install
+      c. Generate Large Binary File (run this in command prompt): fsutil file createnew large_dummy_file.bin 262144000
+      d. To track large files: git lfs track "*.bin"
+      e. Adding gitattributes for tracking large files: git add .gitattributes, git commit -m "Configured Git LFS tracking"
+      f. Add and commit changes to the bin file: git add large_dummy_file.bin, git commit -m "Added large file using Git LFS"
+      g. Push to the remote repository: git push origin lfs
+      h. Verified the bin file using: git clone https://github.com/ankitrlambhate/git_assignment_HeroVired/tree/lfs
