@@ -25,3 +25,19 @@
       f. Add and commit changes to the bin file: git add large_dummy_file.bin, git commit -m "Added large file using Git LFS"
       g. Push to the remote repository: git push origin lfs
       h. Verified the bin file using: git clone https://github.com/ankitrlambhate/git_assignment_HeroVired/tree/lfs
+
+# 3. GeometryCalculator:
+      a. Add the code to the GeometryCalculator.py.
+      b. Create a branch: git checkout -b geometry-calculator
+      c. Create a branch for circle-area feature: git checkout -b feature/circle-area
+      d. Stash the incomplete changes: git stash -u
+      e. Create a branch for rectangle-area feature: git checkout -b feature/rectangle-area
+      f. Stash the incomplete changes: git stash -u
+      g. Complete the circle-area feature: git checkout feature/circle-area, git stash list ,git stash apply
+      i. Push the changes to feature/circle-area branch: git add GeometryCalculator.py, git commit -m "Adding circle area feature", git push origin feature/circle-area
+      j. Complete the rectangle-area feature: git checkout feature/rectangle-area, git stash apply
+      k. Fixing the overriden changes: git stash, git stash apply
+      l. Push the changes to feature/rectangle-area branch: git add GeometryCalculator.py, git commit -m "Adding rectangle area feature", git push origin feature/rectangle-area
+      m. Create pr to dev branch
+      n. Merge the changes into dev branch: git checkout dev, git pull origin dev, git merge feature/circle-area, git merge feature/rectangle-area, git push origin dev
+      o. Merge the changes into main branch: git checkout main, git pull origin main, git merge dev, git push origin main
